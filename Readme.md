@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Александр Адамант](https://up.htmlacademy.ru/htmlcss/15/user/251115).
-* Наставник: [Сергей Попов](https://github.com/tsergeytovarov)
+* Наставник: [Сергей Попов](https://github.com/tsergeytovarov).
 
 ---
 
