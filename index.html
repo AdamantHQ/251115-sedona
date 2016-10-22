@@ -5,17 +5,19 @@
   <title>HTML Academy: Седона</title>
 </head>
 <body>
+
+
   <div class="container">
 
 
-    <header class="page-header">
+    <header class="header">
       <!--Синий треугольник псевдоэлементом-->
       <div class="page-logo">
-        <img src="" alt="City of Sedona">
+        <a href="#"><img src="" alt="City of Sedona"></a>
       </div>
       <nav>
         <!--Наверное, тут надо будет clearfix потом-->
-        <ul class="page-navigation">
+        <ul class="navigation">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
@@ -28,44 +30,48 @@
 
     <div class="welcome-block">
       <!--Как я понял, надписи здесь - это картинки (в макете шрифты не прописаны).
-      Надо ли их вставлять по отдельности или все вместе (вроде они не двигаются друг относительно друга?
-      Надо ли их вставлять фоном или картинками?-->
+      Надо ли их вставлять по отдельности или можно все вместе (вроде они не двигаются друг относительно друга)?
+      Или спрайтами? Надо ли их вставлять фоном или картинками?-->
       <div class="welcome-intro">Welcome to the gorgeous</div>
       <div class="welcome-title">Sedona</div>
       <div class="welcome-quote">Because the Grand Canyon sucks</div>
-      <!--Большая картинка фоном, белые треугольники внизу псевдоэлементами-->
+      <!--Большая картинка фоном к блоку, белые треугольники внизу псевдоэлементами-->
     </div>
 
 
     <div class="title-block">
-      <h1 class="main-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+      <h1>Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
       <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
     </div>
 
 
     <div class="feature-wide">
       <div class="feature-description">
-        <h3 class="feature-title">Настоящий городок</h3>
+        <!--Как тут сделать лучше, чтобы и с переносом и (надо ли?) заголовком?-->
+        <div class="feature-title">
+          Настоящий<br>
+          городок
+        </div>
         <p class="feature-number">№ 1</p>
         <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
       </div>
       <div class="feature-picture">
-        <img src="http://placehold.it/500x250" alt="Настоящий городок">
+        <img src="http://placehold.it/500x250" width="500" height="250" alt="Настоящий городок">
       </div>
     </div>
 
 
     <!--Картинки советов псевдоэлементами с фоном?-->
     <ul class="advice-block">
-      <li class="advice">
+      <li>
         <h3 class="advice-title">Жилье</h3>
         <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
       </li>
-      <li class="advice">
+      <li>
         <h3 class="advice-title">Еда</h3>
         <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
       </li>
-      <li class="advice">
+      <li>
         <h3 class="advice-title">Сувениры</h3>
         <p>Не только китайского, но и местного производства!</p>
       </li>
@@ -74,69 +80,98 @@
 
     <div class="feature-wide">
       <div class="feature-picture">
-        <img src="http://placehold.it/500x250" alt="Там есть мост дьявола">
+        <img src="http://placehold.it/500x250" width="500" height="250" alt="Там есть мост дьявола">
       </div>
       <div class="feature-description">
-        <h3 class="feature-title">Там есть мост дьявола</h3>
+        <div class="feature-title">
+          Там есть<br>
+          мост дьявола
+        </div>
         <p class="feature-number">№ 2</p>
         <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
       </div>
     </div>
 
 
-    <!--Я так понял, что разворачивание/сворачивание фичи по клику здесь не нужно - в макете, вроде, этого нет-->
     <ul class="features-rest">
       <li class="feature-narrow">
         <div class="feature-description">
-          <h3 class="feature-title">Небольшая площадь</h3>
+          <div class="feature-title">
+            Небольшая<br>
+            площадь
+          </div>
           <p class="feature-number">№ 3</p>
           <p>Все достопримечательности находятся очень близко</p>
         </div>
       </li>
+
+
       <li class="feature-narrow">
         <div class="feature-description">
-          <h3 class="feature-title">Красивая дорога</h3>
+          <div class="feature-title">
+            Красивая<br>
+            Дорога
+          </div>
           <p class="feature-number">№ 4</p>
           <p>Ехать в Седону из Лас-Вегаса совсем не скучно</p>
         </div>
       </li>
+
+
       <li class="feature-narrow">
         <div class="feature-description">
-          <h3 class="feature-title">Мало туристов</h3>
+          <div class="feature-title">
+            Мало<br>
+            туристов
+          </div>
           <p class="feature-number">№ 5</p>
           <p>Большинство едет в Гранд Каньон и толпится там</p>
         </div>
       </li>
     </ul>
-
-
     <!--Надо ли заворачивать всё что выше в main или лишний div с классом main-content или что-то вроде?-->
+
+
     <section class="hotel-block">
-      <h2>Заинтересовались</h2>
-      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
+      <h2>Заинтересовались?</h2>
+      <div class="subheading">
+        Укажите предполагаемые даты поездки,<br>
+        и мы покажем вам лучшие предложения гостиниц в Cедоне
+      </div>
+
+
       <button class="button-toggle" type="button">Поиск гостиницы в Седоне</button>
+
+
       <form class="hotel-form" action="/hotels.html" method="post">
         <!--Как оформлять иконку календаря? Псевдоэлементом?-->
         <label for="check-in">Дата заезда:</label>
         <input class="check-in" id="check-in" type="date" value="2014-04-24">
+
+
         <label for="check-out">Дата выезда:</label>
         <input class="check-out" id="check-out" type="date" value="2014-07-04">
+
+
         <!--Тут, видимо, нужны кнопки для плюсов и минусов?-->
         <label for="adults-counter">Взрослые:</label>
         <button class="button-decrease" type="button">-</button>
         <input id="adults-counter" type="text" value="2">
         <button class="button-increase" type="button">+</button>
+
+
         <label for="children-counter">Дети:</label>
         <button class="button-decrease" type="button">-</button>
         <input id="children-counter" type="text" value="2">
         <button class="button-increase" type="button">+</button>
+
+
         <button class="button-submit" type="submit">Найти</button>
       </form>
     </section>
 
 
-    <!--Пока по-хорошему не разбирался, просто взял с embed-map.com, удалил лишнее.
-    Стиль пусть пока висит инлайновый, потом поправлю-->
+    <!--Пока по-хорошему не разбирался, просто взял с embed-map.com, удалил лишнее.-->
     <div class="map-block">
       <div style="width:768px; overflow:hidden; height:600px; max-width:100%;">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d838162.8369633064!2d-111.79513845!3d34.854378399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2sSedona%2C+AZ%2C+USA!5e0!3m2!1sen!2sru!4v1435000602855" width="768" height="600"></iframe>
@@ -145,7 +180,7 @@
 
 
     <!--Clearfix?-->
-    <footer class="page-footer">
+    <footer class="footer">
       <div class="footer-hashtag">
         <a href="#">#VISITSEDONA</a>
       </div>
@@ -156,7 +191,7 @@
       </div>
       <div class="footer-copyright">
         <span>Website by</span>
-        <img src="" alt="HTMLAcademy">
+        <img src="" width="200" height="50" alt="HTMLAcademy">
       </div>
     </footer>
 
