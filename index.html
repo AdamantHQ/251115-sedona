@@ -1,12 +1,111 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
+<body>
+  <div class="container">
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
 
-  </body>
+    <header class="page-header">
+      <!--Синий треугольник псевдоэлементом-->
+      <div class="page-logo">
+        <img src="" alt="City of Sedona">
+      </div>
+      <nav>
+        <!--Наверное, тут надо будет clearfix потом-->
+        <ul class="page-navigation">
+          <li><a href="#">Информация</a></li>
+          <li><a href="#">Фото и видео</a></li>
+          <li><a href="#">Карта штата</a></li>
+          <li><a href="#">Гостиницы</a></li>
+        </ul>
+      </nav>
+    </header>
+
+
+    <div class="welcome-block">
+      <!--Как я понял, надписи здесь - это картинки (в макете шрифты не прописаны).
+      Надо ли их вставлять по отдельности или все вместе (вроде они не двигаются друг относительно друга?
+      Надо ли их вставлять фоном или картинками?-->
+      <div class="welcome-intro">Welcome to the gorgeous</div>
+      <div class="welcome-title">Sedona</div>
+      <div class="welcome-quote">Because the Grand Canyon sucks</div>
+      <!--Большая картинка фоном, белые треугольники внизу псевдоэлементами-->
+    </div>
+
+
+    <div class="title-block">
+      <h1 class="main-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
+      <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+    </div>
+
+
+    <div class="feature-wide">
+      <div class="feature-description">
+        <h2 class="feature-title">Настоящий городок</h2>
+        <p class="feature-number">№ 1</p>
+        <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+      </div>
+      <div class="feature-picture">
+        <img src="http://placehold.it/500x250" alt="Настоящий городок">
+      </div>
+    </div>
+
+
+    <!--Картинки советов псевдоэлементами с фоном?-->
+    <ul class="advice-block">
+      <li class="advice">
+        <h3 class="advice-title">Жилье</h3>
+        <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+      </li>
+      <li class="advice">
+        <h3 class="advice-title">Еда</h3>
+        <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+      </li>
+      <li class="advice">
+        <h3 class="advice-title">Сувениры</h3>
+        <p>Не только китайского, но и местного производства!</p>
+      </li>
+    </ul>
+
+
+    <div class="feature-wide">
+      <div class="feature-picture">
+        <img src="http://placehold.it/500x250" alt="Там есть мост дьявола">
+      </div>
+      <div class="feature-description">
+        <h2 class="feature-title">Там есть мост дьявола</h2>
+        <p class="feature-number">№ 2</p>
+        <p>Да, по нему можно пройти! Если, конечно, вы осмелитесь</p>
+      </div>
+    </div>
+
+    <ul>
+      <li class="feature-narrow">
+        <div class="feature-description">
+          <h2 class="feature-title">Небольшая площадь</h2>
+          <p class="feature-number">№ 3</p>
+          <p>Все достопримечательности находятся очень близко</p>
+        </div>
+      </li>
+      <li class="feature-narrow">
+        <div class="feature-description">
+          <h2 class="feature-title">Красивая дорога</h2>
+          <p class="feature-number">№ 4</p>
+          <p>Ехать в Седону из Лас-Вегаса совсем не скучно</p>
+        </div>
+      </li>
+      <li class="feature-narrow">
+        <div class="feature-description">
+          <h2 class="feature-title">Мало туристов</h2>
+          <p class="feature-number">№ 5</p>
+          <p>Большинство едет в Гранд Каньон и толпится там</p>
+        </div>
+      </li>
+    </ul>
+
+  </div>
+</body>
 </html>
