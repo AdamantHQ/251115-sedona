@@ -11,17 +11,15 @@
 
 
   <header class="header">
-    <!--Синий треугольник псевдоэлементом-->
     <div class="page-logo">
       <a href="#"><img src="" alt="City of Sedona"></a>
     </div>
     <nav>
-      <!--clearfix-->
       <ul class="navigation">
         <li><a href="#">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
-        <li><a href="#">Гостиницы</a></li>
+        <li><a class="active">Гостиницы</a></li>
       </ul>
     </nav>
   </header>
@@ -71,8 +69,10 @@
 
 
           <div class="range">
-            <!--Необходима поддержка IE10, через range сделать не получится?-->
-            <input type="range" min="0" max="10000" step="100">
+            <div class="slider">
+              <button class="slider-min" type="button"></button>
+              <button class="slider-max" type="button"></button>
+            </div>
           </div>
 
 
@@ -107,7 +107,7 @@
     <div class="search-results">
 
 
-      <article class="hotel">
+      <div class="hotel">
         <div class="column-left">
           <a class="hotel-picture" href="#">
             <img src="http://placehold.it/135x85" width="135" height="85" alt="">
@@ -118,11 +118,11 @@
         <div class="column-middle">
           <h2 class="hotel-title">Amara resort & Spa</h2>
           <div class="hotel-description">
-            <span class="hotel-type">Гостиница</span>
-            <span class="hotel-price">от 3500 Р.</span>
-          </div>
-          <div class="hotel-actions">
+            <p>Гостиница</p>
             <a class="button button-more" href="#">Подробнее</a>
+          </div>
+          <div class="hotel-booking">
+            <p>от 3500 Р.</p>
             <a class="button button-book" href="#">Забронировать</a>
           </div>
         </div>
@@ -134,10 +134,10 @@
             Рейтинг: <span class="rating-value">8,5</span>
           </div>
         </div>
-      </article>
+      </div>
 
 
-      <article class="hotel">
+      <div class="hotel">
         <div class="column-left">
           <a class="hotel-picture" href="#">
             <img src="http://placehold.it/135x85" width="135" height="85" alt="">
@@ -148,11 +148,11 @@
         <div class="column-middle">
           <h2 class="hotel-title">Desert Quail Inn</h2>
           <div class="hotel-description">
-            <span class="hotel-type">Мотель</span>
-            <span class="hotel-price">от 2000 Р.</span>
-          </div>
-          <div class="hotel-actions">
+            <p>Мотель</p>
             <a class="button button-more" href="#">Подробнее</a>
+          </div>
+          <div class="hotel-booking">
+            <p>от 2000 Р.</p>
             <a class="button button-book" href="#">Забронировать</a>
           </div>
         </div>
@@ -164,10 +164,10 @@
             Рейтинг: <span class="rating-value">8,9</span>
           </div>
         </div>
-      </article>
+      </div>
 
 
-      <article class="hotel">
+      <div class="hotel">
         <div class="column-left">
           <a class="hotel-picture" href="#">
             <img src="http://placehold.it/135x85" width="135" height="85" alt="">
@@ -178,11 +178,11 @@
         <div class="column-middle">
           <h2 class="hotel-title">Villas at Poco Diablo</h2>
           <div class="hotel-description">
-            <span class="hotel-type">Апартаменты</span>
-            <span class="hotel-price">от 4000 Р.</span>
-          </div>
-          <div class="hotel-actions">
+            <p>Апартаменты</p>
             <a class="button button-more" href="#">Подробнее</a>
+          </div>
+          <div class="hotel-booking">
+            <p>от 4000 Р.</p>
             <a class="button button-book" href="#">Забронировать</a>
           </div>
         </div>
@@ -194,14 +194,13 @@
             Рейтинг: <span class="rating-value">9,2</span>
           </div>
         </div>
-      </article>
+      </div>
     </div>
 
 
   </div>
 
 
-  <!--Clearfix?-->
   <footer class="footer">
     <div class="footer-hashtag">
       <a href="#">#VISITSEDONA</a>
