@@ -6,7 +6,7 @@ body {
   line-height: 26px;
   color: #000;
   text-transform: uppercase;
-  background: grey;
+  background: #aaa;
 }
 
 h1,
@@ -30,9 +30,9 @@ h2 {
   background: #fff;
 }
 
-.navigation {
-  min-height: 56px;
-}
+
+/*Header */
+
 
 .page-logo {
   position: absolute;
@@ -41,24 +41,28 @@ h2 {
 }
 
 .navigation {
+  min-height: 56px;
   list-style: none;
   margin: 0 6%;
   padding: 0;
 }
-
-.navigation li:first-child,
-.navigation li:nth-child(2) {
+.nav-information,
+.nav-media {
   float: left;
   width: 20%;
   text-align: left;
 }
 
-.navigation li:last-child,
-.navigation li:nth-child(3) {
+.nav-map,
+.nav-hotels {
   float: right;
   width: 20%;
   text-align: right;
 }
+
+
+/*Index welcome picture*/
+
 
 .welcome-block {
   height: 511px;
@@ -70,6 +74,10 @@ h2 {
   url("../img/bg-main.jpg") no-repeat 0 0 / 100%;
 }
 
+
+/*Index title block*/
+
+
 .title-block {
   text-align: center;
   padding: 60px 0;
@@ -80,9 +88,12 @@ h2 {
   width: 450px;
 }
 
+
+/*Index features*/
+
+
 .feature-wide {
   width: 100%;
-
 }
 
 .feature-description {
@@ -101,6 +112,11 @@ h2 {
   color: #fff;
 }
 
+.features-rest .feature-description {
+  background: #eee;
+  color: #000;
+}
+
 .feature-picture {
   float: left;
   width: 66%;
@@ -115,17 +131,23 @@ h2 {
   background: url("../img/feature-picture2.jpg") no-repeat 50% 50% / 100%;
 }
 
+
+/*Index advice block*/
+
+
+.advice-block {
+  min-height: 330px;
+}
+
 .advice-item {
   float: left;
   width: 33%;
   text-align: center;
-  min-height: 330px;
 }
 
-.features-rest .feature-description {
-  background: #eee;
-  color: #000;
-}
+
+/*Index hotel block*/
+
 
 .hotel-block {
   text-align: center;
@@ -164,23 +186,111 @@ h2 {
   padding: 0;
 }
 
+
+/*Index map block*/
+
+
 .map-block {
   height: 591px;
   background: url("../img/map.jpg") no-repeat 50% 100%;
 }
 
-.footer {
+
+/*Footer*/
+
+
+.footer-absolute {
   position: absolute;
   width: 100%;
   bottom: 0;
   background: #f9fbf6;
   opacity: 0.9;
-  min-height: 120px;
 }
 
 .footer-column {
   float: left;
   width: 33%;
   text-align: center;
+  min-height: 120px;
 }
 
+
+/*Hotels filter*/
+
+
+.filter {
+
+  background: url("../img/bg-main-blurred.jpg") no-repeat 0 0 / 100%;
+  color: #fff;
+}
+
+.filter form {
+  padding: 30px 6%;
+}
+
+.options {
+  border: none;
+  width: 30%;
+  margin: 0;
+  padding: 0;
+  float: left;
+  min-height: 220px;
+}
+
+
+/*Hotels search header*/
+
+
+.search {
+
+}
+
+.search-header {
+  min-height: 87px;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 6%;
+}
+
+.search-header h2 {
+  float: left;
+  width: 20%;
+}
+
+.sorting-type {
+  float: left;
+}
+
+.sorting-direction {
+  float: right;
+}
+
+
+/*Hotels hotel card*/
+
+
+.hotel {
+  padding: 30px 6%;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.column-left {
+  width: 20%;
+  float: left;
+}
+
+.column-middle {
+  float: left;
+}
+
+.column-right {
+  float: right;
+}
+
+.hotel-title {
+  margin: 0;
+}
+
+.hotel-description,
+.hotel-booking {
+  display: inline-block;
+}

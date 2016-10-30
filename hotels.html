@@ -13,50 +13,64 @@
 
     <header class="header">
       <div class="page-logo">
-        <a href="#"><img src="" alt="City of Sedona"></a>
+        <a href="#"><img src="img/page-logo.png" alt="City of Sedona"></a>
       </div>
+
+
       <nav>
-        <ul class="navigation">
-          <li><a href="#">Информация</a></li>
-          <li><a href="#">Фото и видео</a></li>
-          <li><a href="#">Карта штата</a></li>
-          <li><a class="active">Гостиницы</a></li>
+        <ul class="navigation clearfix">
+          <li class="nav-information"><a href="#">Информация</a></li>
+          <li class="nav-media"><a href="#">Фото и видео</a></li>
+          <li class="nav-hotels active"><a href="#">Гостиницы</a></li>
+          <li class="nav-map"><a href="#">Карта штата</a></li>
         </ul>
       </nav>
     </header>
 
 
-    <div class="filter">
+    <div class="filter clearfix">
       <form action="/" method="POST">
 
 
         <fieldset class="options">
           <legend>Инфраструктура:</legend>
-          <input id="checkbox-infrastructure1" type="checkbox" checked>
-          <label for="checkbox-infrastructure1">Бассейн</label>
-          <input id="checkbox-infrastructure2" type="checkbox">
-          <label for="checkbox-infrastructure2">Парковка</label>
-          <input id="checkbox-infrastructure3" type="checkbox">
-          <label for="checkbox-infrastructure3">Wi-fi</label>
+          <div class="option">
+            <input id="checkbox-infrastructure1" type="checkbox" checked>
+            <label for="checkbox-infrastructure1">Бассейн</label>
+          </div>
+          <div class="option">
+            <input id="checkbox-infrastructure2" type="checkbox">
+            <label for="checkbox-infrastructure2">Парковка</label>
+          </div>
+          <div class="option">
+            <input id="checkbox-infrastructure3" type="checkbox">
+            <label for="checkbox-infrastructure3">Wi-fi</label>
+          </div>
         </fieldset>
 
 
         <fieldset class="options">
           <legend>Инфраструктура:</legend>
-          <input id="checkbox-type1" type="checkbox" checked>
-          <label for="checkbox-type1">Гостиница</label>
-          <input id="checkbox-type2" type="checkbox" checked>
-          <label for="checkbox-type2">Мотель</label>
-          <input id="checkbox-type3" type="checkbox" checked>
-          <label for="checkbox-type3">Апартаменты</label>
+          <div class="option">
+            <input id="checkbox-type1" type="checkbox" checked>
+            <label for="checkbox-type1">Гостиница</label>
+          </div>
+          <div class="option">
+            <input id="checkbox-type2" type="checkbox" checked>
+            <label for="checkbox-type2">Мотель</label>
+          </div>
+          <div class="option">
+            <input id="checkbox-type3" type="checkbox" checked>
+            <label for="checkbox-type3">Апартаменты</label>
+          </div>
         </fieldset>
 
 
         <div class="price-block">
           <p>Стоимость в сутки (Р):</p>
+
+
           <div class="price-changer">
-
-
             <div class="price-from">
               <label for="price-from">От</label>
               <input id="price-from" type="text" value="0">
@@ -77,7 +91,7 @@
             </div>
 
 
-            <button class="button button-transparent" type="submit">Показать</button>
+            <button class="button-transparent" type="submit">Показать</button>
           </div>
         </div>
       </form>
@@ -85,22 +99,21 @@
 
 
     <div class="search">
-      <header class="search-header">
+      <header class="search-header clearfix">
         <h2>Найдено: <span class="search-founded">3</span></h2>
-        <div class="sorting">
 
 
-          <div class="sorting-type">
+        <div class="sorting-type">
+            <span>Сортировка</span>
             <a class="active" href="#">По цене</a>
             <a href="#">По типу</a>
             <a href="#">По рейтингу</a>
-          </div>
+        </div>
 
 
-          <div class="sorting-direction">
-            <a class="arrow-up" href="#"></a>
-            <a class="arrow-down" href="#"></a>
-          </div>
+        <div class="sorting-direction">
+          <a class="arrow-up" href="#">Up</a>
+          <a class="arrow-down" href="#">Down</a>
         </div>
       </header>
 
@@ -108,7 +121,7 @@
       <div class="search-results">
 
 
-        <div class="hotel">
+        <div class="hotel clearfix">
           <div class="column-left">
             <a class="hotel-picture" href="#">
               <img src="img/hotel-picture1.jpg" width="135" height="90" alt="">
@@ -138,7 +151,7 @@
         </div>
 
 
-        <div class="hotel">
+        <div class="hotel clearfix">
           <div class="column-left">
             <a class="hotel-picture" href="#">
               <img src="img/hotel-picture2.jpg" width="135" height="90" alt="">
@@ -168,7 +181,7 @@
         </div>
 
 
-        <div class="hotel">
+        <div class="hotel clearfix">
           <div class="column-left">
             <a class="hotel-picture" href="#">
               <img src="img/hotel-picture3.jpg" width="135" height="90" alt="">
@@ -202,20 +215,21 @@
     </div>
 
 
-    <footer class="footer">
-      <div class="footer-hashtag">
+    <footer class="footer clearfix">
+      <div class="footer-column">
         <a href="#">#VISITSEDONA</a>
       </div>
-      <div class="footer-social">
-        <a class="button-social twitter" href="#"></a>
-        <a class="button-social facebook" href="#"></a>
-        <a class="button-social youtube" href="#"></a>
+      <div class="footer-column">
+        <a class="button-social twitter" href="#">tw</a>
+        <a class="button-social facebook" href="#">fb</a>
+        <a class="button-social youtube" href="#">yt</a>
       </div>
-      <div class="footer-copyright">
+      <div class="footer-column">
         <span>Website by</span>
-        <img src="" width="200" height="50" alt="HTMLAcademy">
+        <img src="img/ha-logo.png" width="113" height="39" alt="HTMLAcademy">
       </div>
     </footer>
+
 
 
   </div>
