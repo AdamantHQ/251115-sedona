@@ -219,15 +219,29 @@ h2 {
   bottom: 0;
   background: #f9fbf6;
   opacity: 0.9;
-  min-height: 120px;
+  padding: 36px 0;
+  font-size: 0;
 }
 
 .footer-column {
   display: inline-block;
   vertical-align: middle;
-  width: 33%;
+  width: 33.333333%;
   text-align: center;
+}
 
+.footer-visit {
+  font-size: 21px;
+  font-weight: 600;
+}
+
+.footer-visit a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-logo {
+  font-size: 14px;
 }
 
 
@@ -235,7 +249,6 @@ h2 {
 
 
 .filter {
-
   background: url("../img/bg-main-blurred.jpg") no-repeat 0 0 / 100%;
   color: #fff;
 }
