@@ -250,6 +250,7 @@ h2 {
   color: #fff;
   margin-top: 34px;
   border: none;
+  cursor: pointer;
 }
 
 .button-brown {
@@ -266,23 +267,177 @@ h2 {
 }
 
 .popup {
-  position: relative;
+  position: absolute;
+  width: 568px;
+  background: #fff;
 }
 
 .hotel-form {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #fff;
-  width: 568px;
+  margin: 55px;
+  font-weight: 700;
 }
 
 .hotel-form fieldset {
+  text-align: left;
   border: none;
-  margin: 0;
+  margin-left: 0;
+  margin-right: 0;
   padding: 0;
 }
 
+.hotel-form input {
+  font: inherit;
+  padding: 0 15px;
+  font-size: 14px;
+  line-height: 38px;
+  box-sizing: border-box;
+  border: none;
+  outline: 0;
+  background-color: #f2f2f2;
+}
+
+.hotel-form input:hover {
+  background-color: #ebebeb;
+}
+
+.hotel-form input:focus {
+  background-color: #fff;
+  outline: 1px solid #e5e5e5;
+}
+
+.dates {
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  margin-bottom: 30px;
+}
+
+.dates label {
+  display: inline-block;
+  vertical-align: top;
+  width: 111px;
+  font-size: 14px;
+  line-height: 38px;
+}
+
+.dates input {
+  display: inline-block;
+  vertical-align: top;
+  width: 347px;
+  text-transform: uppercase;
+}
+
+.button-calendar {
+  position: absolute;
+  right: 9px;
+  bottom: 9px;
+  padding: 0;
+  outline: 0;
+  border: none;
+  width: 22px;
+  height: 21px;
+  background: transparent url("../img/sprite-calendar.png") -20px -20px no-repeat;
+}
+
+.button-calendar:hover {
+  background-position: -20px -82px;
+}
+
+.button-calendar:active {
+  background-position: -20px -144px;
+}
+
+.counter {
+  font-size: 0;
+}
+
+.counter-adults {
+  display: inline-block;
+  vertical-align: top;
+  width: 111px;
+  font-size: 14px;
+  line-height: 38px;
+}
+
+.counter-block {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.counter input {
+  width: 114px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 38px;
+}
+
+.counter button {
+  position: absolute;
+}
+
+.counter-children {
+  display: inline-block;
+  vertical-align: top;
+  width: 118px;
+  font-size: 14px;
+  line-height: 38px;
+  padding-left: 53px;
+  box-sizing: border-box;
+}
+
+.counter button {
+  border: none;
+  font-size: 22px;
+  font-weight: 700;
+  color: #a9a9a9;
+  background: none;
+}
+
+.counter button:hover {
+  color: #000;
+}
+
+.counter button:active {
+  color: #81b3d2;
+}
+
+.button-decrease {
+  top: 5px;
+  left: 9px;
+}
+
+.button-increase {
+  top: 6px;
+  right: 6px;
+}
+
+.button-submit {
+  width: 100%;
+  margin-top: 54px;
+  padding: 16px;
+  font: inherit;
+  text-transform: inherit;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button-blue {
+  background: #81b3d2;
+}
+
+.button-blue:hover {
+  background: #669ec0;
+}
+
+.button-blue:active {
+  background: #5496bd;
+  color: rgba(255, 255, 255, 0.3);
+}
 
 /*Index map block*/
 

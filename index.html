@@ -109,37 +109,37 @@
 
       <div class="popup">
         <form class="hotel-form" action="/hotels.html" method="post">
-          <fieldset>
+          <fieldset class="dates">
             <label for="check-in">Дата заезда:</label>
-            <input class="date" id="check-in" type="date" value="2014-04-24">
-            <button class="calendar" type="button"></button>
+            <input id="check-in" type="text" value="24 Апреля 2016">
+            <button class="button-calendar" type="button"></button>
           </fieldset>
 
 
-          <fieldset>
+          <fieldset class="dates">
             <label for="check-out">Дата выезда:</label>
-            <input class="date" id="check-out" type="date" value="2014-07-04">
-            <button class="calendar" type="button"></button>
+            <input id="check-out" type="text" value="4 июля 2016">
+            <button class="button-calendar" type="button"></button>
           </fieldset>
 
 
           <fieldset class="counter">
-            <label for="adults-counter">Взрослые:</label>
-            <button class="button-decrease" type="button">-</button>
-            <input id="adults-counter" type="text" value="2">
-            <button class="button-increase" type="button">+</button>
+            <label class="counter-adults" for="adults-counter">Взрослые:</label>
+            <div class="counter-block">
+              <button class="button-decrease" type="button">&#8722;</button>
+              <input id="adults-counter" type="text" value="2">
+              <button class="button-increase" type="button">+</button>
+            </div>
+            <label class="counter-children" for="children-counter">Дети:</label>
+            <div class="counter-block">
+              <button class="button-decrease" type="button">&#8722;</button>
+              <input id="children-counter" type="text" value="0">
+              <button class="button-increase" type="button">+</button>
+            </div>
           </fieldset>
 
 
-          <fieldset class="counter">
-            <label for="children-counter">Дети:</label>
-            <button class="button-decrease" type="button">-</button>
-            <input id="children-counter" type="text" value="2">
-            <button class="button-increase" type="button">+</button>
-          </fieldset>
-
-
-          <button class="button-submit" type="submit">Найти</button>
+          <button class="button-submit button-blue" type="submit">Найти</button>
         </form>
       </div>
     </section>
