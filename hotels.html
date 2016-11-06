@@ -13,7 +13,7 @@
 
     <header class="header">
       <div class="page-logo">
-        <a href="#"><img src="img/page-logo.png" alt="City of Sedona"></a>
+        <a href="#">City of Sedona</a>
       </div>
 
 
@@ -21,8 +21,9 @@
         <ul class="navigation clearfix">
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
-          <li class="active"><a href="#">Гостиницы</a></li>
           <li><a href="#">Карта штата</a></li>
+          <li><a class="active" href="#">Гостиницы</a></li>
+
         </ul>
       </nav>
     </header>
@@ -66,34 +67,35 @@
         </fieldset>
 
 
-        <div class="price-block">
-          <p>Стоимость в сутки (Р):</p>
+        <fieldset class="price-block">
+          <legend>Стоимость в сутки (Р):</legend>
 
 
           <div class="price-changer">
             <div class="price-from">
-              <label for="price-from">От</label>
+              <label for="price-from">От&nbsp;</label>
               <input id="price-from" type="text" value="0">
             </div>
 
 
             <div class="price-to">
-              <label for="price-to">До</label>
+              <label for="price-to">До&nbsp;</label>
               <input id="price-to" type="text" value="3000">
             </div>
-
-
-            <div class="range">
-              <div class="slider">
-                <button class="slider-min" type="button"></button>
-                <button class="slider-max" type="button"></button>
-              </div>
-            </div>
-
-
-            <button class="button-transparent" type="submit">Показать</button>
           </div>
-        </div>
+
+
+          <div class="range">
+            <div class="slider">
+              <button class="slider-min" type="button"></button>
+              <button class="slider-max" type="button"></button>
+            </div>
+          </div>
+
+
+          <button class="button-filter" type="submit">Показать</button>
+
+        </fieldset>
       </form>
     </div>
 
@@ -110,7 +112,7 @@
 
 
         <div class="sorting-type">
-            <span>Сортировка</span>
+            <span>Сортировка:</span>
             <a class="active" href="#">По цене</a>
             <a href="#">По типу</a>
             <a href="#">По рейтингу</a>
@@ -144,7 +146,7 @@
             <h2 class="hotel-title">Amara resort & Spa</h2>
             <div class="hotel-description">
               <p>Гостиница</p>
-              <a class="button button-more" href="#">Подробнее</a>
+              <a class="button-blue button-more" href="#">Подробнее</a>
             </div>
             <div class="hotel-booking">
               <p>от 3500 Р.</p>

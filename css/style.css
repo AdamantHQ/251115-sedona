@@ -38,6 +38,14 @@ h2 {
   transform: translateX(-50%);
 }
 
+.page-logo a {
+  display: block;
+  font-size: 0;
+  width: 138px;
+  height: 70px;
+  background: url(../img/bg-sprite.png) -2px -2px no-repeat;
+}
+
 .navigation {
   list-style: none;
   margin: 0;
@@ -75,6 +83,18 @@ h2 {
   opacity: 0.3;
 }
 
+.navigation .active {
+  color: #7f6d62;
+}
+
+.navigation .active:hover {
+  color: #7f6d62;
+}
+
+.navigation .active:active {
+  opacity: 0.3;
+}
+
 
 /*Index welcome picture*/
 
@@ -84,9 +104,9 @@ h2 {
   width: 100%;
   min-width: 768px;
   max-width: 1200px;
-  background: url("../img/welcome-logo.png") no-repeat 50% 50% / auto,
+  background: url("../img/bg-welcome-logo.png") no-repeat 50% 49% / auto,
   url("../img/welcome-block-mask.svg") no-repeat 50% 100% / 100% 57px,
-  url("../img/bg-main.jpg") no-repeat 50% 29% / 100%;
+  url("../img/bg-main.jpg") no-repeat 50% 28% / 100%;
 }
 
 
@@ -153,14 +173,16 @@ h2 {
   float: left;
   width: 66.666666%;
   min-height: 256px;
+  position: relative;
+  overflow: hidden;
 }
 
-.feature1 {
-  background: url("../img/feature-picture1.jpg") no-repeat 50% 50% / 100%;
-}
-
-.feature2 {
-  background: url("../img/feature-picture2.jpg") no-repeat 50% 50% / 100%;
+.feature-picture img {
+  position: absolute;
+  top: 50%;
+  max-width: 100%;
+  height: auto;
+  transform: translateY(-50%);
 }
 
 
@@ -179,7 +201,7 @@ h2 {
 }
 
 .advice-item::before {
-  background: url(../img/sprite-advice.png) no-repeat;
+  background: url(../img/bg-sprite.png) no-repeat;
   position: absolute;
   top: 60px;
   transform: translateX(-50%);
@@ -190,7 +212,7 @@ h2 {
   top: 61px;
   width: 74px;
   height: 70px;
-  background-position: -5px -5px;
+  background-position: -144px -2px;
 }
 
 .advice-gifts::before {
@@ -198,14 +220,14 @@ h2 {
   top: 56px;
   width: 64px;
   height: 76px;
-  background-position: -5px -85px;
+  background-position: -2px -76px;
 }
 
 .advice-hotel::before {
   content: "";
   width: 75px;
   height: 72px;
-  background-position: -5px -171px;
+  background-position: -70px -76px;
 }
 
 .advice-title {
@@ -334,17 +356,17 @@ h2 {
   padding: 0;
   outline: 0;
   border: none;
-  width: 22px;
-  height: 21px;
-  background: transparent url("../img/sprite-calendar.png") -20px -20px no-repeat;
+  width: 21px;
+  height: 22px;
+  background: transparent url("../img/bg-sprite.png") -222px -2px no-repeat;
 }
 
 .button-calendar:hover {
-  background-position: -20px -82px;
+  background-position: -247px -2px;
 }
 
 .button-calendar:active {
-  background-position: -20px -144px;
+  background-position: -222px -27.5px;
 }
 
 .counter {
@@ -416,17 +438,22 @@ h2 {
   width: 100%;
   margin-top: 54px;
   padding: 16px;
-  font: inherit;
-  text-transform: inherit;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+
+
 }
 
 .button-blue {
+  display: block;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
   background: #81b3d2;
 }
 
@@ -520,7 +547,7 @@ h2 {
 
 .button-social::before {
   content: "";
-  background: url("../img/sprite-social.png") no-repeat;
+  background: url("../img/bg-sprite.png") no-repeat;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -530,19 +557,19 @@ h2 {
 .twitter::before {
   width: 17px;
   height: 15px;
-  background-position: -20px -78px;
+  background-position: -247px -28px;
 }
 
 .facebook::before {
   width: 10px;
   height: 19px;
-  background-position: -20.5px -22px;
+  background-position: -268px -28px;
 }
 
 .youtube::before {
   width: 20px;
   height: 16px;
-  background-position: -20px -134px;
+  background-position: -247px -51px;
 }
 
 .button-social:active::before {
@@ -560,15 +587,15 @@ h2 {
   width: 113px;
   height: 39px;
   margin-left: 5px;
-  background: transparent url("../img/sprite-logo.png") -20px -20px no-repeat;
+  background: transparent url("../img/bg-sprite.png") -149px -75px no-repeat;
 }
 
 .footer-logo a:hover {
-  background-position: -20px -99px;
+  background-position: -149px -118px;
 }
 
 .footer-logo a:active {
-  background-position: -20px -20px;
+  background-position: -149px -75px;
   opacity: 0.3;
 }
 
@@ -576,51 +603,131 @@ h2 {
 
 
 .filter {
-  background: url("../img/bg-main-blurred.jpg") no-repeat 0 50%;
+  background: #46525c url("../img/bg-main-blurred.jpg") no-repeat 0 50%;
   background-size: cover;
   color: #fff;
-}
-
-.filter form {
   padding: 30px 6%;
 }
 
-.options {
+.filter fieldset {
   border: none;
-  width: 30%;
-  margin: 0;
+  margin-left: 0;
   padding: 0;
+}
+
+.options {
+  width: 210px;
+  margin-right: 4.1%;
   float: left;
-  min-height: 220px;
+}
+
+.filter legend {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.option {
+  margin-top: 24px;
 }
 
 .price-block {
-  float: left;
-  width: 40%;
+  float: right;
+  width: 29%;
 }
 
-.price-block p {
-  margin-top: 0;
+.price-block legend {
+  margin-bottom: 12px;
 }
 
+.price-changer {
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  font-size: 0;
+}
+
+.price-changer > div {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  width: 49%;
+  margin: 5px 0;
+}
+
+.price-from {
+  border-right: 2px solid #fff;
+  margin: 12px 0;
+}
+
+.price-changer input {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 50%;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.price-changer label {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.button-filter {
+  display: block;
+  margin: 0 auto;
+  border: 2px solid #fff;
+  background-color: transparent;
+  padding: 9px 35px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.button-filter:hover {
+  color: #000;
+  background-color: #fff;
+}
 
 /*Hotels search header*/
 
 
 .search-header {
-  min-height: 87px;
   border-bottom: 1px solid #e5e5e5;
-  padding: 0 6%;
+  padding: 30px 6%;
 }
 
 .search-header h2 {
-  width: 135px;
-  float: left;
+  margin:0;
+  width: 152px;
+  display: inline-block;
+  vertical-align: baseline;
+  font-size: 21px;
+  line-height: 26px;
 }
 
 .sorting-type {
-  margin-left: 165px;
-  margin-right: 125px;
+  display: inline-block;
+  vertical-align: baseline;
+  width: 360px;
+  padding-left: 10px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting-type a {
+  margin-left: 32px;
+
 }
 
 .sorting-direction {
@@ -660,4 +767,10 @@ h2 {
 .hotel-booking {
   display: inline-block;
   vertical-align: top;
+}
+
+.button-more {
+  padding: 8px 17px;
+  font-size: 14px;
+
 }
