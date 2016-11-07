@@ -232,7 +232,7 @@ h2 {
 
 .advice-title {
   margin-top: 162px;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .advice-item p {
@@ -274,7 +274,7 @@ h2 {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  font: inherit;
+  font-family: inherit;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
@@ -442,9 +442,6 @@ h2 {
   padding: 16px;
   font-size: 21px;
   line-height: 26px;
-  font-weight: 700;
-
-
 }
 
 .button-blue {
@@ -452,7 +449,7 @@ h2 {
   text-decoration: none;
   border: none;
   cursor: pointer;
-  font: inherit;
+  font-family: inherit;
   font-weight: 700;
   text-transform: uppercase;
   color: #fff;
