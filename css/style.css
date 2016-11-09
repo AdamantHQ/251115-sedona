@@ -35,6 +35,8 @@ h2 {
 .page-logo {
   position: absolute;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -48,27 +50,42 @@ h2 {
 
 .navigation {
   list-style: none;
-  margin: 0;
+  margin: 0 6%;
   padding: 0;
 }
 
 .navigation li {
   float: left;
-  width: 20%;
-  text-align: center;
+  width: 22.727272%;
+  text-align: left;
   padding: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  line-height: 16px;
+  margin-top: 14px;
+  margin-bottom: 16px;
+  line-height: 26px;
+}
+
+.navigation li:nth-child(3n),
+.navigation li:nth-child(4n) {
+  text-align: right;
+}
+
+/*Fixing the font size differences*/
+
+.navigation li:nth-child(2) {
+  letter-spacing: 0.01em;
+}
+
+.navigation li:nth-child(3) {
+  letter-spacing: 0.04em;
 }
 
 .navigation li:nth-child(2) {
-  margin-right: 20%;
+  margin-right: 9.090909%;
 }
 
 .navigation a {
   font-size: 14px;
-  line-height: 16px;
+  line-height: 26px;
   text-decoration: none;
   font-weight: 700;
   color: inherit;
@@ -106,7 +123,7 @@ h2 {
   max-width: 1200px;
   background: url("../img/bg-welcome-logo.png") no-repeat 50% 49% / auto,
   url("../img/welcome-block-mask.svg") no-repeat 50% 100% / 100% 57px,
-  url("../img/bg-main.jpg") no-repeat 50% 28% / 100%;
+  #293d44 url("../img/bg-main.jpg") no-repeat 50% 28% / 100%;
 }
 
 
@@ -146,7 +163,9 @@ h2 {
   float: left;
   width: 33.333333%;
   text-align: center;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;;
   min-height: 256px;
 }
 
@@ -179,9 +198,11 @@ h2 {
 
 .feature-picture img {
   position: absolute;
-  top: 50%;
+  top: 48%;
   max-width: 100%;
   height: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -204,6 +225,9 @@ h2 {
   background: url("../img/bg-sprite.png") no-repeat;
   position: absolute;
   top: 60px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -271,6 +295,7 @@ h2 {
 
 .button-brown {
   display: inline-block;
+  vertical-align: middle;
   text-decoration: none;
   border: none;
   cursor: pointer;
@@ -311,12 +336,14 @@ h2 {
 
 .hotel-form input {
   font: inherit;
-  padding: 0 15px;
+  padding: 9px 15px;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   border: none;
-  outline: 0;
+  outline: none;
   background-color: #f2f2f2;
 }
 
@@ -334,6 +361,10 @@ h2 {
   position: relative;
   font-size: 0;
   margin-bottom: 30px;
+}
+
+.dates:first-child {
+  margin-bottom: 29px;
 }
 
 .dates label {
@@ -393,7 +424,7 @@ h2 {
   width: 114px;
   text-align: center;
   font-size: 14px;
-  line-height: 38px;
+  line-height: 20px;
 }
 
 .counter button {
@@ -407,7 +438,9 @@ h2 {
   font-size: 14px;
   line-height: 38px;
   padding-left: 53px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;;
 }
 
 .counter button {
@@ -428,7 +461,7 @@ h2 {
 
 .button-decrease {
   top: 5px;
-  left: 9px;
+  left: 8px;
 }
 
 .button-increase {
@@ -446,6 +479,7 @@ h2 {
 
 .button-blue {
   display: inline-block;
+  vertical-align: middle;
   text-decoration: none;
   border: none;
   cursor: pointer;
@@ -470,7 +504,7 @@ h2 {
 
 .map-block {
   height: 593px;
-  background: url("../img/map.jpg") no-repeat 50% 100%;
+  background: #ccdeab url("../img/map.jpg") no-repeat 50% 100%;
 }
 
 
@@ -498,26 +532,23 @@ h2 {
   text-align: center;
 }
 
-.footer-logo > * {
-  display: inline-block;
-  vertical-align: middle;
+.footer-column:first-child {
+  font-size: 6px;
 }
 
 .footer-visit {
-  font-size: 21px;
-  font-weight: 600;
-}
-
-.footer-visit a {
   text-decoration: none;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 600;
   color: #000;
 }
 
-.footer-visit a:hover {
+.footer-visit:hover {
   color: #81b3d2;
 }
 
-.footer-visit a:active {
+.footer-visit:active {
   color: #000;
   opacity: 0.3;
 }
@@ -533,7 +564,7 @@ h2 {
 }
 
 .button-social:last-child {
-  margin-right: 0;
+  margin-right: 3px;
 }
 
 .button-social:hover {
@@ -550,19 +581,21 @@ h2 {
   position: absolute;
   left: 50%;
   top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
 .twitter::before {
   width: 17px;
   height: 15px;
-  background-position: -247px -28px;
+  background-position: -246px -27px;
 }
 
 .facebook::before {
   width: 10px;
   height: 19px;
-  background-position: -272px -2px;
+  background-position: -272px -3px;
 }
 
 .youtube::before {
@@ -575,8 +608,11 @@ h2 {
   opacity: 0.3;
 }
 
-.footer-logo {
+.footer-logo span {
+  display: inline-block;
+  vertical-align: middle;
   font-size: 14px;
+  line-height: 26px;
 }
 
 .footer-logo a {
@@ -585,7 +621,7 @@ h2 {
   vertical-align: middle;
   width: 113px;
   height: 39px;
-  margin-left: 5px;
+  margin-left: 8px;
   background: transparent url("../img/bg-sprite.png") -149px -75px no-repeat;
 }
 
@@ -603,7 +639,7 @@ h2 {
 
 
 .filter {
-  background: #46525c url("../img/bg-main-blurred.jpg") no-repeat 0 50%;
+  background: #627a8e url("../img/bg-main-blurred.jpg") no-repeat 0 50%;
   background-size: cover;
   color: #fff;
   padding: 29px 6% 31px 6%;
@@ -746,6 +782,7 @@ h2 {
   background-color: #ababab;
   cursor: pointer;
   top: -9px;
+  box-shadow: 0 2px 0 0 rgba(0,0,0,.14);
 }
 
 .slider-button:hover {
@@ -867,6 +904,8 @@ h2 {
 }
 
 .sorting-direction .arrow-down::before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -943,6 +982,7 @@ h2 {
   margin-top: -2px;
   margin-bottom: 13px;
   line-height: 21px;
+  letter-spacing: 0.01em;
 }
 
 .hotel-title a {
