@@ -130,17 +130,17 @@
           <fieldset class="counters">
             <div class="counter-block">
               <label class="counter-adults" for="adults-counter">Взрослые:</label>
-              <button class="button-decrease" type="button">&#8722;</button>
-              <input id="adults-counter" type="text" value="2">
-              <button class="button-increase" type="button">+</button>
+              <button class="decrease" type="button">&#8722;</button>
+              <input id="adults-counter" type="text" value="2" maxlength="2">
+              <button class="increase" type="button">+</button>
             </div>
 
 
             <div class="counter-block">
               <label class="counter-children" for="children-counter">Дети:</label>
-              <button class="button-decrease" type="button">&#8722;</button>
-              <input id="children-counter" type="text" value="0">
-              <button class="button-increase" type="button">+</button>
+              <button class="decrease" type="button">&#8722;</button>
+              <input id="children-counter" type="text" value="0" maxlength="2">
+              <button class="increase" type="button">+</button>
             </div>
           </fieldset>
 
@@ -175,5 +175,8 @@
 
 
   </div>
+
+
+  <script src="js/script.js"></script>
 </body>
 </html>
