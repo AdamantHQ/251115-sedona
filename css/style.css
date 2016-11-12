@@ -36,6 +36,53 @@ h2 {
 }
 
 
+/*Animation*/
+
+
+@keyframes show {
+  0% {
+    -ms-transform: scaleY(0) translateY(-100%);
+    transform: scaleY(0) translateY(-100%);
+  }
+  50% {
+    -ms-transform: scaleY(0.7) translateY(-20%);
+    transform: scaleY(0.7) translateY(-20%);
+  }
+  100% {
+    -ms-transform: scaleY(1) translateY(0);
+    transform: scaleY(1) translateY(0);
+  }
+}
+
+@keyframes hide {
+  0% {
+    -ms-transform: scaleY(1) translateY(0);
+    transform: scaleY(1) translateY(0);
+  }
+  80% {
+    -ms-transform: scaleY(0.4) translateY(-20%);
+    transform: scaleY(0.4) translateY(-20%);
+  }
+  100% {
+    -ms-transform: scaleY(0) translateY(-100%);
+    transform: scaleY(0) translateY(-100%);
+  }
+}
+
+
+@-webkit-keyframes show {
+  0% { -webkit-transform: scaleY(0) translateY(-100%); }
+  50% { -webkit-transform: scaleY(0.7) translateY(-20%); }
+  100% { -webkit-transform: scaleY(1) translateY(0); }
+}
+
+@-webkit-keyframes hide {
+  0% { -webkit-transform: scaleY(1) translateY(0); }
+  50% { -webkit-transform: scaleY(0.4) translateY(-20%); }
+  100% { -webkit-transform: scaleY(0) translateY(-100%); }
+}
+
+
 /*Header */
 
 
@@ -344,6 +391,9 @@ h2 {
 }
 
 .button-brown {
+  position: relative;
+  z-index: 2;
+
   display: inline-block;
 
   cursor: pointer;
@@ -370,17 +420,30 @@ h2 {
 
 .popup {
   position: absolute;
-
-  display: block;
+  z-index: 1;
 
   width: 568px;
+
+  transform-origin: top center;
 
   background: #fff;
   box-shadow: 0 7px 15px 0 rgba(0,0,0,.15);
 }
 
-.popup-hidden {
-  display: none;
+.popup-visible {
+  -webkit-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-animation: show 0.5s ease-out;
+          animation: show 0.5s ease-out;
+}
+
+.popup-invisible {
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-animation: hide 0.2s ease-in;
+          animation: hide 0.2s ease-in;
 }
 
 .hotel-form {
@@ -435,8 +498,6 @@ h2 {
 
   font-size: 0;
 }
-
-
 
 .dates label {
   display: inline-block;
