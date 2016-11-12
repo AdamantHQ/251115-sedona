@@ -6,20 +6,29 @@ var toggleButton = document.querySelector(".button-toggle");
 var counterButtons = document.querySelectorAll(".counter-block button");
 
 
-
 //Pop-up hiding by default
 if (popup) {
-  popup.classList.add("popup-hidden");
+  popup.classList.remove("popup-visible");
+  popup.classList.add("popup-invisible");
 
 
   //Toggle button functionality
   toggleButton.addEventListener("click", function(event) {
     event.preventDefault();
-    popup.classList.toggle("popup-hidden");
+    popup.classList.toggle("popup-visible");
+    popup.classList.toggle("popup-invisible");
   });
 
 
-//PLUS and MINUS counter buttons.
+//Escape button closes the popup
+  window.addEventListener("keydown", function(event) {
+    if (event.keyCode === 27 && !popup.classList.contains("popup-hidden")) {
+      popup.classList.remove("popup-visible");
+    }
+  });
+
+
+//Plus and minus counter buttons.
   [].forEach.call(counterButtons, function(button) {
     var counter = button.parentNode.querySelector("input");
     button.addEventListener("click", function(event) {
@@ -27,13 +36,6 @@ if (popup) {
       if (counter.value < 99 && button.className === "increase") counter.value++;
       if (counter.value > 0 && button.className === "decrease") counter.value--;
     })
-  });
-
-
-  document.addEventListener("keydown", function(event) {
-    if (event.keyCode === 27 && !popup.classList.contains("popup-hidden")) {
-      popup.classList.add("popup-hidden");
-    }
   });
 }
 
