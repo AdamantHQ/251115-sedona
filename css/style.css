@@ -92,6 +92,7 @@ h2 {
 .page-logo {
   position: absolute;
   left: 50%;
+  z-index: 1000;
 
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -184,16 +185,29 @@ h2 {
 
 
 .welcome-block {
+  position: relative;
+  z-index: 1;
   width: 100%;
   min-width: 768px;
   max-width: 1200px;
   height: 508px;
-
-  background: url("../img/bg-welcome-logo.png") no-repeat 50% 49% / auto,
-  url("../img/welcome-block-mask.svg") no-repeat 50% 100% / 100% 57px,
-  #293d44 url("../img/bg-main.jpg") no-repeat 50% 28% / 100%;
+/*url("../img/welcome-logo.png") no-repeat 50% 49% / auto,*/
+  background: url("../img/welcome-block-mask.svg") no-repeat 50% 100% / 100% 57px,
+      #293d44 url("../img/bg-main.jpg") no-repeat 50% 28% / 100%;
 }
 
+.welcome-block img {
+  position: absolute;
+  top: 76px;
+  left: 50%;
+
+  width: 458px;
+  height: 352px;
+
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
 
 /*Index title block*/
 
@@ -252,6 +266,7 @@ h2 {
   display: block;
 
   max-width: 160px;
+  min-height: 41px;
   margin: 55px auto 24px;
 }
 
@@ -406,6 +421,7 @@ h2 {
 
   color: #fff;
   border: none;
+  outline: none;
   background: #766357;
 
   font-family: inherit;
@@ -534,7 +550,7 @@ h2 {
   cursor: pointer;
 
   border: none;
-  outline: 0;
+  outline: none;
   background: transparent url("../img/bg-sprite.png") -174px -91px no-repeat;
 }
 
@@ -601,6 +617,7 @@ h2 {
 
   color: #a9a9a9;
   border: none;
+  outline: none;
   background-color: #f2f2f2;
 
   font-size: 22px;
@@ -635,6 +652,7 @@ h2 {
 
   color: #fff;
   border: none;
+  outline: none;
   background: #81b3d2;
 
   font-family: inherit;
@@ -683,8 +701,7 @@ h2 {
   position: absolute;
   bottom: 0;
 
-  opacity: 0.9;
-  background: #f9fbf6;
+  background: rgba(255,255,255,.9);
 }
 
 .footer-column {
@@ -729,6 +746,7 @@ h2 {
   margin-right: 6px;
 
   vertical-align: top;
+  outline: none;
 
   background: #81b3d2
 }
@@ -832,6 +850,7 @@ h2 {
   padding: 0;
 
   border: none;
+  outline: none;
 }
 
 .options {
@@ -870,6 +889,7 @@ h2 {
   display: inline-block;
 
   vertical-align: top;
+  cursor: pointer;
 }
 
 .option label::before {
@@ -925,6 +945,7 @@ h2 {
 
   border: 2px solid #fff;
   border-radius: 2px;
+  outline: none;
 
   font-size: 0;
 }
@@ -1002,6 +1023,7 @@ h2 {
   left: 0;
 
   height: 2px;
+  outline: none;
 
   background: #fff;
 }
@@ -1047,6 +1069,7 @@ h2 {
   color: #fff;
   border: 2px solid #fff;
   border-radius: 2px;
+  outline: none;
   background-color: transparent;
 
   font-family: inherit;
@@ -1105,6 +1128,7 @@ h2 {
 
   color: rgba(0,0,0,0.3);
   border-bottom: 1px dotted #81b3d2;
+  outline: none;
 }
 
 .sorting-type a:last-child {
@@ -1145,6 +1169,7 @@ h2 {
   margin-left: 9px;
 
   vertical-align: middle;
+  outline: none;
 
   font-size: 0;
 }

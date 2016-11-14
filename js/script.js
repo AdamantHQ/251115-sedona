@@ -15,11 +15,19 @@ if (popup) {
   var adultsCounter = popup.querySelector("#adults-counter");
   var childrenCounter = popup.querySelector("#children-counter");
 
+
   //Storage values
   var checkInStorage = localStorage.getItem("checkIn");
   var checkOutStorage = localStorage.getItem("checkOut");
   var adultsCounterStorage = localStorage.getItem("adultsCounter");
   var childrenCounterStorage = localStorage.getItem("childrenCounter");
+
+
+  //Sets storage values
+  if (checkInStorage) checkIn.value = checkInStorage;
+  if (checkOutStorage) checkOut.value = checkOutStorage;
+  if (adultsCounterStorage) adultsCounter.value = adultsCounterStorage;
+  if (childrenCounterStorage) childrenCounter.value = childrenCounterStorage;
 
 
   //Hides pop-up by default
@@ -33,13 +41,6 @@ if (popup) {
     popup.classList.toggle("popup-visible");
     popup.classList.toggle("popup-invisible");
   });
-
-
-  //Sets storage values
-  if (checkInStorage) checkIn.value = checkInStorage;
-  if (checkOutStorage) checkOut.value = checkOutStorage;
-  if (adultsCounterStorage) adultsCounter.value = adultsCounterStorage;
-  if (childrenCounterStorage) childrenCounter.value = childrenCounterStorage;
 
 
   //Escape button closes the popup
@@ -89,6 +90,7 @@ if (popup) {
 
 //Slider functionality
 var sliderButtons = document.querySelectorAll(".slider-button");
+
 
 if (sliderButtons) {
   [].forEach.call(sliderButtons, function(button) {
