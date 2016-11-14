@@ -6,7 +6,7 @@ body {
   color: #000;
   background: #f1f1f1;
 
-  font-family: 'PT Sans', "Arial", sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
@@ -21,7 +21,7 @@ h2 {
   display: table;
   clear: both;
 
-  content: '';
+  content: "";
 }
 
 .container {
@@ -942,7 +942,7 @@ h2 {
   height: 22px;
   margin-left: 1px;
 
-  content: '';
+  content: "";
 
   background: #fff;
 }
