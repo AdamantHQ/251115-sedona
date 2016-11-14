@@ -1,5 +1,7 @@
 
+
 //***Index page***
+
 
 var popup = document.querySelector(".popup");
 var toggleButton = document.querySelector(".button-toggle");
