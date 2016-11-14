@@ -4,12 +4,25 @@
 
 
 var popup = document.querySelector(".popup");
-var toggleButton = document.querySelector(".button-toggle");
-var counterButtons = document.querySelectorAll(".counter-block button");
 
-
-//Pop-up hiding by default
 if (popup) {
+
+  var toggleButton = document.querySelector(".button-toggle");
+  var form = popup.querySelector(".hotel-form");
+  var counterButtons = popup.querySelectorAll(".counter-block button");
+  var checkIn = popup.querySelector("#check-in");
+  var checkOut = popup.querySelector("#check-out");
+  var adultsCounter = popup.querySelector("#adults-counter");
+  var childrenCounter = popup.querySelector("#children-counter");
+
+  //Storage values
+  var checkInStorage = localStorage.getItem("checkIn");
+  var checkOutStorage = localStorage.getItem("checkOut");
+  var adultsCounterStorage = localStorage.getItem("adultsCounter");
+  var childrenCounterStorage = localStorage.getItem("childrenCounter");
+
+
+  //Hides pop-up by default
   popup.classList.remove("popup-visible");
   popup.classList.add("popup-invisible");
 
@@ -22,7 +35,14 @@ if (popup) {
   });
 
 
-//Escape button closes the popup
+  //Sets storage values
+  if (checkInStorage) checkIn.value = checkInStorage;
+  if (checkOutStorage) checkOut.value = checkOutStorage;
+  if (adultsCounterStorage) adultsCounter.value = adultsCounterStorage;
+  if (childrenCounterStorage) childrenCounter.value = childrenCounterStorage;
+
+
+  //Escape button closes the popup
   window.addEventListener("keydown", function(event) {
     if (event.keyCode === 27 && !popup.classList.contains("popup-hidden")) {
       popup.classList.remove("popup-visible");
@@ -30,7 +50,7 @@ if (popup) {
   });
 
 
-//Plus and minus counter buttons.
+  //Plus and minus counter buttons.
   [].forEach.call(counterButtons, function(button) {
     var counter = button.parentNode.querySelector("input");
     button.addEventListener("click", function(event) {
@@ -39,7 +59,29 @@ if (popup) {
       if (counter.value > 0 && button.className === "decrease") counter.value--;
     })
   });
+
+
+  //Required fields check
+  form.addEventListener("submit", function(event) {
+    if (!checkIn.value || !checkOut.value) {
+      event.preventDefault();
+      alert("Пожалуйста, введите даты заезда и отъезда!");
+    } else if (adultsCounter.value === "0") {
+      event.preventDefault();
+      alert("Пожалуйста, введите количество взрослых гостей!");
+    } else {
+      localStorage.setItem("checkIn", checkIn.value);
+      localStorage.setItem("checkOut", checkOut.value);
+      localStorage.setItem("adultsCounter", adultsCounter.value);
+      localStorage.setItem("childrenCounter", childrenCounter.value);
+    }
+  });
 }
+
+
+
+
+
 
 
 //***Hotels page***
