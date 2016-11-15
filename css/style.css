@@ -191,7 +191,6 @@ h2 {
   min-width: 768px;
   max-width: 1200px;
   height: 508px;
-/*url("../img/welcome-logo.png") no-repeat 50% 49% / auto,*/
   background: url("../img/welcome-block-mask.svg") no-repeat 50% 100% / 100% 57px,
       #293d44 url("../img/bg-main.jpg") no-repeat 50% 28% / 100%;
 }
