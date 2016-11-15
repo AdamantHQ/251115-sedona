@@ -114,7 +114,6 @@ if (sliderButtons) {
         var right = rangeBarRight - event.pageX - buttonWidth / 2;
 
         if (button.classList.contains("slider-min")) {
-          console.log(buttonWidth);
           if (left < 0) {
             innerBar.style.left = "0px";
           } else if (left >= innerBarRight - buttonWidth * 2) {
